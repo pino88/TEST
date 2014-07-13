@@ -51,6 +51,8 @@ public class FirstAccessActivity extends Activity {
     private void enterAsAnonymous() {
         Log.d(TAG_LOG, "Anonymous access");
         final Intent anonymousIntent = new Intent(this, MenuActivity.class);
+        final UserModel userModel = UserModel.create(System.currentTimeMillis());
+        anonymousIntent.putExtra(MenuActivity.USER_EXTRA, userModel);
         startActivity(anonymousIntent);
     }
 
