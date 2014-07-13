@@ -16,5 +16,8 @@
     <string name="wrong_credential_error">bad credential</string>
     <string name="username_label">username</string>
     <string name="password_label">password</string>
+    <string name="new_data_button_label">Insert new data</string>
+    <string name="old_data_button_label">Old data button</string>
+    <string name="remote_data_button_label">Remote data button</string>
 
 </resources>

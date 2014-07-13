@@ -16,7 +16,7 @@ import it.dsergio.android.test.service.LoginService;
 public class LoginActivity extends Activity {
 
     public static final String LOGIN_ACTION = "it.dsergio.android.test.action.LOGIN_ACTION";
-    public static final String USER_DATA_EXTRA="userLogged";
+    public static final String USER_DATA_EXTRA="it.dsergio.android.test.extra.USER_DATA_EXTRA";
     private TextView mErrorTextView;
     private EditText mUsernameEditText;
     private EditText mPasswordEditText;

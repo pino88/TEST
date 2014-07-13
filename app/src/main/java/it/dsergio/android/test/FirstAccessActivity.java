@@ -50,7 +50,7 @@ public class FirstAccessActivity extends Activity {
     }
     private void enterAsAnonymous() {
         Log.d(TAG_LOG, "Anonymous access");
-        final Intent anonymousIntent = new Intent(this, MainActivity.class);
+        final Intent anonymousIntent = new Intent(this, MenuActivity.class);
         startActivity(anonymousIntent);
     }
 
@@ -64,8 +64,8 @@ public class FirstAccessActivity extends Activity {
                 case RESULT_OK:
                     final UserModel userModel = (UserModel)
                             data.getParcelableExtra(LoginActivity.USER_DATA_EXTRA);
-                    final Intent mainIntent = new Intent(this, MainActivity.class);
-                    //mainIntent.putExtra(MainActivity.USER_EXTRA, userModel);
+                    final Intent mainIntent = new Intent(this, MenuActivity.class);
+                    mainIntent.putExtra(MenuActivity.USER_EXTRA, userModel);
                     startActivity(mainIntent);
                     finish();
                     break;

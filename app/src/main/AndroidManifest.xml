@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity android:name="it.dsergio.android.test.FirstAccessActivity" />
-        <activity android:name="it.dsergio.android.test.MainActivity" />
+        <activity android:name=".MenuActivity" />
         <activity
             android:name="it.dsergio.android.test.SplashActivity"
             android:label="@string/app_name"

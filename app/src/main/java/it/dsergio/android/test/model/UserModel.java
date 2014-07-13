@@ -97,4 +97,8 @@ public class UserModel implements Parcelable {
     public boolean isLogged() {
         return !TextUtils.isEmpty(this.mUsername);
     }
+    @Override
+    public String toString(){
+        return mUsername+" "+mEmail+" "+mLocation+" "+mBirthDate;
+    }
 }
