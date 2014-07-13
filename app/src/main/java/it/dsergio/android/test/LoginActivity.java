@@ -1,7 +1,7 @@
 package it.dsergio.android.test;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -10,14 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import it.dsergio.android.test.R;
 import it.dsergio.android.test.model.UserModel;
 import it.dsergio.android.test.service.LoginService;
 
-public class LoginActivity extends ActionBarActivity {
+public class LoginActivity extends Activity {
 
-    //public static final Actio LOGIN_ACTION = 1;
+    public static final String LOGIN_ACTION = "it.dsergio.android.test.action.LOGIN_ACTION";
     public static final String USER_DATA_EXTRA="userLogged";
     private TextView mErrorTextView;
     private EditText mUsernameEditText;
@@ -27,27 +25,9 @@ public class LoginActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
-        this.mErrorTextView=(TextView) findViewById(R.id.error_message_label);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.login, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+        this.mErrorTextView = (TextView) findViewById(R.id.error_message_label);
+        this.mUsernameEditText =(EditText) findViewById(R.id.username_edittext);
+        this.mPasswordEditText = (EditText) findViewById(R.id.password_edittext);
     }
 
     public void doLogin(View loginButton) {
@@ -81,4 +61,6 @@ public class LoginActivity extends ActionBarActivity {
             this.mErrorTextView.setVisibility(View.VISIBLE);
         }
     }
+
+
 }

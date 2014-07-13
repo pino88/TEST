@@ -9,10 +9,12 @@ package it.dsergio.android.test;
         import android.widget.Button;
         import android.widget.Toast;
 
+        import it.dsergio.android.test.model.UserModel;
+
 
 public class FirstAccessActivity extends Activity {
     private static final String TAG_LOG = SplashActivity.class.getSimpleName();
-    private static final int LOGIN_REQUEST_ID = 1;
+    public static final int LOGIN_REQUEST_ID = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class FirstAccessActivity extends Activity {
         registrationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // doRegistration();
+                // doRegistration();
                 Context context = getApplicationContext();
                 CharSequence text = "Registrazione non ancora implementata";
                 int duration = Toast.LENGTH_SHORT;
@@ -55,5 +57,21 @@ public class FirstAccessActivity extends Activity {
     private void doLogin() {
         final Intent loginIntent = new Intent(LoginActivity.LOGIN_ACTION);
         startActivityForResult(loginIntent, LOGIN_REQUEST_ID);
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == LOGIN_REQUEST_ID) {
+            switch (resultCode) {
+                case RESULT_OK:
+                    final UserModel userModel = (UserModel)
+                            data.getParcelableExtra(LoginActivity.USER_DATA_EXTRA);
+                    final Intent mainIntent = new Intent(this, MainActivity.class);
+                    //mainIntent.putExtra(MainActivity.USER_EXTRA, userModel);
+                    startActivity(mainIntent);
+                    finish();
+                    break;
+                case RESULT_CANCELED:
+                    break;
+            }
+        }
     }
 }

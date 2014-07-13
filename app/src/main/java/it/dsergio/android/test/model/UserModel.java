@@ -37,7 +37,8 @@ public class UserModel implements Parcelable {
             this.mEmail = in.readString();
         }
         if (in.readByte() == PRESENT) {
-            this.mLocation = (Location)in.readParcelable(getClass().getClassLoader());
+            this.mLocation = in.readString();
+          //  this.mLocation = (Location)in.readParcelable(getClass().getClassLoader());
         }
     }
 

@@ -25,7 +25,7 @@
         <activity android:name="it.dsergio.android.test.LoginActivity"
             android:label="@string/login_activity_label">
             <intent-filter>
-                <action android:name="uk.co.massimocarli.android.ugho.action.LOGIN_ACTION"/>
+                <action android:name="it.dsergio.android.test.action.LOGIN_ACTION"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
