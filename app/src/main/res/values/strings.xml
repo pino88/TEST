@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UGHO</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="anonimus_button_label">Anonimus</string>
+    <string name="register_button_label">Register</string>
+    <string name="login_button_label">Log in</string>
+    <string name="login_activity_label">Log in</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="mandatory_field_error">The field %1$s is mandatory</string>
+    <string name="wrong_credential_error">bad credential</string>
+
+</resources>
