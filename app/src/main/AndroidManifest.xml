@@ -11,6 +11,10 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".FirstAccessActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".NewDataActivity"/>
+        <activity android:name=".InputDataActivity"/>
+        <activity android:name=".LocalDataActivity"/>
+        <activity android:name=".RemoteDataActivity"/>
         <activity
             android:name=".SplashActivity"
             android:label="@string/app_name"

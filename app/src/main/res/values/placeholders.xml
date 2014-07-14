@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="placeholder_data_question">How do you feel in Love?</string>
+    <string name="placeholder_local_data">Show local data</string>
+    <string name="placeholder_remote_data">Show remote data</string>
+
+
+</resources>

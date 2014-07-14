@@ -16,12 +16,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 import java.lang.ref.WeakReference;
 
-/**
- * An example full-screen activity that shows and hides the system UI (i.e.
- * status bar and navigation/system bar) with user interaction.
- *
- * @see SystemUiHider
- */
+
 public class SplashActivity extends Activity {
 
     private static final String IS_DONE_KEY = "it.dsergio.adroid.ugho.IS_DONE_KEY";

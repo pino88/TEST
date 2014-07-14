@@ -26,5 +26,11 @@
     <string name="title_activity_show_user_data">ShowUserDataActivity</string>
     <string name="register_activity_label">ShowUserDataActivity</string>
     <string name="confirm_button_label">confirm</string>
+    <string name="luck_label">luck</string>
+    <string name="work_label">work</string>
+    <string name="health_label">health</string>
+    <string name="love_label">love</string>
+    <string name="data_question_format">How do you feel in %1$s?</string>
+    <string name="send_button_label">send</string>
 
 </resources>

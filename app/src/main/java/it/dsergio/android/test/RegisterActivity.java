@@ -5,18 +5,12 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.Calendar;
-
-import it.dsergio.android.test.R;
 import it.dsergio.android.test.model.UserModel;
-import it.dsergio.android.test.service.LoginService;
 import it.dsergio.android.test.service.RegistrationService;
 
 public class RegisterActivity extends ActionBarActivity {

@@ -1,10 +1,12 @@
 package it.dsergio.android.test;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import it.dsergio.android.test.model.UserModel;
@@ -48,5 +50,26 @@ public class MenuActivity extends ActionBarActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void insertNewData(View newDataButton) {
+        Log.d(TAG_LOG, "We choose to insert new data");
+        final Intent newDataIntent = new Intent(this, NewDataActivity.class);
+        newDataIntent.putExtra(NewDataActivity.USER_EXTRA, mUserModel);
+        startActivity(newDataIntent);
+    }
+
+
+    public void viewOldData(View oldDataButton) {
+        Log.d(TAG_LOG, "We choose to view our old data");
+        final Intent localDataIntent = new Intent(this, LocalDataActivity.class);
+        startActivity(localDataIntent);
+    }
+
+
+    public void viewRemoteData(View remoteDataButton) {
+        Log.d(TAG_LOG, "We choose to view remote data");
+        final Intent remoteDataIntent = new Intent(this, RemoteDataActivity.class);
+        startActivity(remoteDataIntent);
     }
 }

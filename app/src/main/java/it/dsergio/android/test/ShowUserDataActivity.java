@@ -3,7 +3,6 @@ package it.dsergio.android.test;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +12,6 @@ import java.text.DateFormat;
 import java.util.Calendar;
 
 import it.dsergio.android.test.model.UserModel;
-import it.dsergio.android.test.service.LoginService;
 
 public class ShowUserDataActivity extends Activity {
 

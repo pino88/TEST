@@ -81,6 +81,7 @@ public class FirstAccessActivity extends Activity {
                     final Intent detailIntent = new Intent(ShowUserDataActivity.SHOW_USER_ACTION);
                     detailIntent.putExtra(ShowUserDataActivity.USER_EXTRA, userModel);
                     startActivity(detailIntent);
+                    finish();
                     break;
                 case RESULT_CANCELED:
                     break;
