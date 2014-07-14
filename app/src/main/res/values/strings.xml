@@ -19,5 +19,12 @@
     <string name="new_data_button_label">Insert new data</string>
     <string name="old_data_button_label">Old data button</string>
     <string name="remote_data_button_label">Remote data button</string>
+    <string name="location_label">location</string>
+    <string name="date_label">birth date</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="email_label">email</string>
+    <string name="title_activity_show_user_data">ShowUserDataActivity</string>
+    <string name="register_activity_label">ShowUserDataActivity</string>
+    <string name="confirm_button_label">confirm</string>
 
 </resources>

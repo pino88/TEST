@@ -1,6 +1,6 @@
 package it.dsergio.android.test;
 
-        import android.app.Activity;
+import android.app.Activity;
         import android.content.Context;
         import android.content.Intent;
         import android.os.Bundle;
@@ -15,6 +15,7 @@ package it.dsergio.android.test;
 public class FirstAccessActivity extends Activity {
     private static final String TAG_LOG = SplashActivity.class.getSimpleName();
     public static final int LOGIN_REQUEST_ID = 1;
+    public static final int REGISTRATION_REQUEST_ID = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +32,7 @@ public class FirstAccessActivity extends Activity {
         registrationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // doRegistration();
-                Context context = getApplicationContext();
-                CharSequence text = "Registrazione non ancora implementata";
-                int duration = Toast.LENGTH_SHORT;
-
-                Toast toast = Toast.makeText(context, text, duration);
-                toast.show();
+                doRegistration();
             }
         });
         final Button loginButton = (Button) findViewById(R.id.login_button);
@@ -60,6 +55,10 @@ public class FirstAccessActivity extends Activity {
         final Intent loginIntent = new Intent(LoginActivity.LOGIN_ACTION);
         startActivityForResult(loginIntent, LOGIN_REQUEST_ID);
     }
+    private void doRegistration(){
+        final Intent registrationIntent = new Intent(RegisterActivity.REGISTRATION_ACTION);
+        startActivityForResult(registrationIntent,REGISTRATION_REQUEST_ID);
+    }
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == LOGIN_REQUEST_ID) {
             switch (resultCode) {
@@ -70,6 +69,18 @@ public class FirstAccessActivity extends Activity {
                     mainIntent.putExtra(MenuActivity.USER_EXTRA, userModel);
                     startActivity(mainIntent);
                     finish();
+                    break;
+                case RESULT_CANCELED:
+                    break;
+            }
+        } else if (requestCode == REGISTRATION_REQUEST_ID) {
+            switch (resultCode) {
+                case RESULT_OK:
+                    final UserModel userModel = (UserModel) data.getParcelableExtra
+                            (RegisterActivity.USER_DATA_EXTRA);
+                    final Intent detailIntent = new Intent(ShowUserDataActivity.SHOW_USER_ACTION);
+                    detailIntent.putExtra(ShowUserDataActivity.USER_EXTRA, userModel);
+                    startActivity(detailIntent);
                     break;
                 case RESULT_CANCELED:
                     break;

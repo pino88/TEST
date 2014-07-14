@@ -101,4 +101,16 @@ public class UserModel implements Parcelable {
     public String toString(){
         return mUsername+" "+mEmail+" "+mLocation+" "+mBirthDate;
     }
+    public String getEmail(){
+        return mEmail;
+    }
+    public String getLocation(){
+        return mLocation;
+    }
+    public String getUsername(){
+        return mUsername;
+    }
+    public long getBirthDate(){
+        return mBirthDate;
+    }
 }

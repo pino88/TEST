@@ -21,7 +21,7 @@ public class LoginService {
     public UserModel login(final String username, final String password) {
         UserModel userModel = null;
         if (DUMMY_USERNAME.equalsIgnoreCase(username) && DUMMY_PASSWORD.equalsIgnoreCase(password)) {
-            userModel = UserModel.create(System.currentTimeMillis()).withEmail("dummy@daisy.com");
+            userModel = UserModel.create(System.currentTimeMillis()).withEmail("dummy@daisy.com").withUsername(username);
         }
         return userModel;
     }
