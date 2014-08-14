@@ -1,6 +1,6 @@
-package it.dsergio.android.test;
+package it.dsergio.android.test.activity;
 
-import it.dsergio.android.test.util.SystemUiHider;
+import it.dsergio.android.test.R;
 
 import android.app.Activity;
 import android.content.Context;

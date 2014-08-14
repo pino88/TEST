@@ -1,4 +1,4 @@
-package it.dsergio.android.test;
+package it.dsergio.android.test.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import it.dsergio.android.test.R;
 import it.dsergio.android.test.model.UserModel;
 import it.dsergio.android.test.service.LoginService;
 

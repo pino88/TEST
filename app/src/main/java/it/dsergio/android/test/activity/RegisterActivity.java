@@ -1,4 +1,4 @@
-package it.dsergio.android.test;
+package it.dsergio.android.test.activity;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -10,6 +10,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import java.util.Calendar;
+
+import it.dsergio.android.test.R;
 import it.dsergio.android.test.model.UserModel;
 import it.dsergio.android.test.service.RegistrationService;
 

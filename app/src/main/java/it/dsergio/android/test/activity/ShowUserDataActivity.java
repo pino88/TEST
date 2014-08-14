@@ -1,4 +1,4 @@
-package it.dsergio.android.test;
+package it.dsergio.android.test.activity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.text.DateFormat;
 import java.util.Calendar;
 
+import it.dsergio.android.test.R;
 import it.dsergio.android.test.model.UserModel;
 
 public class ShowUserDataActivity extends Activity {

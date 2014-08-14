@@ -1,18 +1,16 @@
-package it.dsergio.android.test;
+package it.dsergio.android.test.activity;
 
-import android.app.Activity;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.os.Bundle;
-        import android.util.Log;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.Toast;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 
-        import it.dsergio.android.test.model.UserModel;
+import it.dsergio.android.test.R;
+import it.dsergio.android.test.fragment.FirstAccessFragment;
+import it.dsergio.android.test.model.UserModel;
 
 
-public class FirstAccessActivity extends Activity {
+public class FirstAccessActivity extends FragmentActivity implements FirstAccessFragment.FirstAccessListener{
     private static final String TAG_LOG = SplashActivity.class.getSimpleName();
     public static final int LOGIN_REQUEST_ID = 1;
     public static final int REGISTRATION_REQUEST_ID = 2;
@@ -20,30 +18,13 @@ public class FirstAccessActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.first_access_activity);
-        final Button anonymousButton = (Button) findViewById(R.id.anonimus_button);
-        anonymousButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                enterAsAnonymous();
-            }
-        });
-        final Button registrationButton = (Button) findViewById(R.id.register_button);
-        registrationButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doRegistration();
-            }
-        });
-        final Button loginButton = (Button) findViewById(R.id.login_button);
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                doLogin();
-            }
-        });
+        setContentView(R.layout.activity_single_fragment);
+        if (savedInstanceState == null) {
+            final FirstAccessFragment fragment = new FirstAccessFragment();
+            getSupportFragmentManager().beginTransaction().add(R.id.anchor_point, fragment).commit();
+        }
     }
-    private void enterAsAnonymous() {
+    public void enterAsAnonymous() {
         Log.d(TAG_LOG, "Anonymous access");
         final Intent anonymousIntent = new Intent(this, MenuActivity.class);
         final UserModel userModel = UserModel.create(System.currentTimeMillis());
@@ -51,11 +32,11 @@ public class FirstAccessActivity extends Activity {
         startActivity(anonymousIntent);
     }
 
-    private void doLogin() {
+    public void doLogin() {
         final Intent loginIntent = new Intent(LoginActivity.LOGIN_ACTION);
         startActivityForResult(loginIntent, LOGIN_REQUEST_ID);
     }
-    private void doRegistration(){
+    public void doRegistration(){
         final Intent registrationIntent = new Intent(RegisterActivity.REGISTRATION_ACTION);
         startActivityForResult(registrationIntent,REGISTRATION_REQUEST_ID);
     }

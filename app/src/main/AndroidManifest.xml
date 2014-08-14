@@ -9,14 +9,14 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity android:name=".FirstAccessActivity" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".NewDataActivity"/>
-        <activity android:name=".InputDataActivity"/>
-        <activity android:name=".LocalDataActivity"/>
-        <activity android:name=".RemoteDataActivity"/>
+        <activity android:name=".activity.FirstAccessActivity" />
+        <activity android:name=".activity.MenuActivity" />
+        <activity android:name=".activity.NewDataActivity"/>
+        <activity android:name=".activity.InputDataActivity"/>
+        <activity android:name=".activity.LocalDataActivity"/>
+        <activity android:name=".activity.RemoteDataActivity"/>
         <activity
-            android:name=".SplashActivity"
+            android:name=".activity.SplashActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".activity.LoginActivity"
             android:label="LoginActivity" >
             <intent-filter>
                 <action android:name="it.dsergio.android.test.action.LOGIN_ACTION" />
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:label="@string/title_activity_register" >
             <intent-filter>
                 <action android:name="it.dsergio.android.test.action.REGISTRATION_ACTION" />
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ShowUserDataActivity"
+            android:name=".activity.ShowUserDataActivity"
             android:label="@string/register_activity_label">
         <intent-filter>
             <action android:name="it.dsergio.android.test.action.SHOW_USER_ACTION"/>

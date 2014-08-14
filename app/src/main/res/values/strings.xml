@@ -32,5 +32,6 @@
     <string name="love_label">love</string>
     <string name="data_question_format">How do you feel in %1$s?</string>
     <string name="send_button_label">send</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
