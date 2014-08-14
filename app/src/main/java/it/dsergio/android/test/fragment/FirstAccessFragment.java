@@ -42,7 +42,7 @@ public class FirstAccessFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle saveInstanceState) {
         Log.d(TAG_LOG, "onCreateView");
-        final View firstAccessView = inflater.inflate(R.layout.first_access_activity, null);
+        final View firstAccessView = inflater.inflate(R.layout.fragment_first_access, null);
         firstAccessView.findViewById(R.id.anonimus_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
